@@ -1,7 +1,1632 @@
-<html>
-  
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sangam Dilip Reddy | Portfolio</title>
+
+    <style>
+
+        /* ================================
+           RESET
+        ================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7fa;
+            color: #0b1f3a;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* ================================
+           SIDEBAR
+        ================================= */
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+
+            width: 230px;
+            height: 100vh;
+
+            background: #0b1f3a;
+            color: white;
+
+            padding: 40px 25px;
+
+            display: flex;
+            flex-direction: column;
+
+            z-index: 1000;
+        }
+
+        .brand {
+            margin-bottom: 70px;
+        }
+
+        .brand h2 {
+            font-size: 25px;
+            letter-spacing: -1px;
+        }
+
+        .brand p {
+            color: #9fb3c8;
+            font-size: 11px;
+            margin-top: 6px;
+            letter-spacing: 2px;
+        }
+
+        .menu {
+            list-style: none;
+        }
+
+        .menu li {
+            margin-bottom: 20px;
+        }
+
+        .menu a {
+            color: #b8c7d9;
+            font-size: 13px;
+            font-weight: bold;
+
+            display: flex;
+            gap: 12px;
+
+            transition: 0.3s;
+        }
+
+        .menu a span {
+            color: #6f8ba8;
+        }
+
+        .menu a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .sidebar-bottom {
+            margin-top: auto;
+        }
+
+        .sidebar-bottom p {
+            font-size: 11px;
+            color: #8da4bd;
+            line-height: 1.6;
+        }
+
+
+        /* ================================
+           MAIN
+        ================================= */
+
+        main {
+            margin-left: 230px;
+        }
+
+        section {
+            min-height: 100vh;
+            padding: 90px 8%;
+        }
+
+
+        /* ================================
+           HERO
+        ================================= */
+
+        #home {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+
+            background: #f4f7fa;
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-left {
+            width: 65%;
+        }
+
+        .hero-number {
+            font-size: 13px;
+            font-weight: bold;
+
+            letter-spacing: 3px;
+
+            color: #64748b;
+
+            margin-bottom: 25px;
+        }
+
+        .hero-title {
+            font-size: clamp(60px, 9vw, 120px);
+
+            line-height: 0.85;
+
+            letter-spacing: -7px;
+
+            font-weight: 900;
+
+            margin-bottom: 35px;
+
+            color: #0b1f3a;
+        }
+
+        .hero-title span {
+            display: block;
+            color: #35516f;
+        }
+
+        .hero-description {
+            max-width: 580px;
+
+            font-size: 18px;
+
+            color: #52606d;
+
+            line-height: 1.8;
+
+            margin-bottom: 35px;
+        }
+
+        .hero-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .hero-links a {
+            padding: 13px 20px;
+
+            border: 1px solid #0b1f3a;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .hero-links a:first-child {
+            background: #0b1f3a;
+            color: white;
+        }
+
+        .hero-links a:hover {
+            background: #183b63;
+            color: white;
+        }
+
+        .hero-right {
+            position: absolute;
+
+            right: 7%;
+            bottom: 12%;
+
+            width: 230px;
+            height: 300px;
+
+            background: white;
+
+            border: 1px solid #cbd5e1;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .initial {
+            font-size: 130px;
+            font-weight: 900;
+
+            color: #e4ebf2;
+
+            -webkit-text-stroke: 2px #0b1f3a;
+        }
+
+        .hero-tag {
+            position: absolute;
+
+            right: -25px;
+            top: 35px;
+
+            background: #0b1f3a;
+            color: white;
+
+            padding: 10px 18px;
+
+            font-size: 11px;
+
+            letter-spacing: 2px;
+        }
+
+
+        /* ================================
+           SECTION TITLES
+        ================================= */
+
+        .section-top {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: flex-end;
+
+            margin-bottom: 60px;
+
+            border-bottom: 1px solid #cbd5e1;
+
+            padding-bottom: 20px;
+        }
+
+        .section-number {
+            font-size: 12px;
+
+            color: #718096;
+
+            letter-spacing: 2px;
+        }
+
+        .section-title {
+            font-size: 48px;
+
+            letter-spacing: -2px;
+
+            color: #0b1f3a;
+        }
+
+
+        /* ================================
+           ABOUT
+        ================================= */
+
+        #about {
+            background: white;
+        }
+
+        .about-layout {
+            display: grid;
+
+            grid-template-columns: 1fr 1.5fr;
+
+            gap: 80px;
+        }
+
+        .about-label {
+            font-size: 14px;
+            font-weight: bold;
+            color: #718096;
+        }
+
+        .about-text {
+            font-size: 21px;
+
+            line-height: 1.8;
+
+            color: #334e68;
+        }
+
+        .about-text strong {
+            color: #0b1f3a;
+        }
+
+        .about-facts {
+            margin-top: 40px;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 20px;
+        }
+
+        .fact {
+            border-top: 2px solid #0b1f3a;
+
+            padding-top: 15px;
+        }
+
+        .fact small {
+            display: block;
+
+            color: #829ab1;
+
+            font-size: 10px;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 6px;
+        }
+
+        .fact strong {
+            font-size: 15px;
+
+            color: #0b1f3a;
+        }
+
+
+        /* ================================
+           SKILLS
+        ================================= */
+
+        #skills {
+            background: #f4f7fa;
+        }
+
+        .skills-intro {
+            max-width: 600px;
+
+            color: #52606d;
+
+            margin-bottom: 45px;
+
+            line-height: 1.7;
+        }
+
+        .skill-list {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            max-width: 850px;
+        }
+
+        .skill {
+            background: white;
+
+            border: 1px solid #cbd5e1;
+
+            padding: 15px 22px;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            color: #0b1f3a;
+
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            background: #0b1f3a;
+            color: white;
+
+            border-color: #0b1f3a;
+        }
+
+
+        /* ================================
+           PROJECTS
+        ================================= */
+
+        #projects {
+            background: white;
+        }
+
+        .project {
+            display: grid;
+
+            grid-template-columns: 130px 1fr 150px;
+
+            gap: 30px;
+
+            align-items: center;
+
+            padding: 35px 0;
+
+            border-bottom: 1px solid #d9e2ec;
+        }
+
+        .project:first-child {
+            border-top: 1px solid #d9e2ec;
+        }
+
+        .project-number {
+            font-size: 50px;
+
+            font-weight: 900;
+
+            color: #d9e2ec;
+        }
+
+        .project h3 {
+            font-size: 25px;
+
+            margin-bottom: 8px;
+
+            color: #0b1f3a;
+        }
+
+        .project p {
+            color: #627d98;
+
+            max-width: 600px;
+
+            line-height: 1.6;
+
+            font-size: 14px;
+        }
+
+        .project-type {
+            justify-self: end;
+
+            padding: 8px 12px;
+
+            background: #e8eef5;
+
+            color: #0b1f3a;
+
+            font-size: 10px;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+        }
+
+        .project:hover .project-number {
+            color: #0b1f3a;
+        }
+
+
+        /* ================================
+           AI LAB
+        ================================= */
+
+        #ai {
+            background: #dce6f0;
+
+            position: relative;
+        }
+
+        .ai-box {
+            max-width: 950px;
+
+            background: #0b1f3a;
+
+            color: white;
+
+            padding: 60px;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .ai-box::after {
+            content: "AI";
+
+            position: absolute;
+
+            right: -30px;
+            bottom: -80px;
+
+            font-size: 250px;
+
+            font-weight: 900;
+
+            color: #102b4c;
+        }
+
+        .ai-small {
+            color: #9fb3c8;
+
+            font-size: 11px;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 20px;
+        }
+
+        .ai-box h2 {
+            font-size: 55px;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 20px;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+        .ai-box p {
+            max-width: 620px;
+
+            color: #c4d1df;
+
+            line-height: 1.8;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+        .ai-topics {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin-top: 35px;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+        .ai-topic {
+            border: 1px solid #45617d;
+
+            padding: 10px 15px;
+
+            font-size: 12px;
+
+            color: #dbe7f2;
+        }
+
+
+        /* ================================
+           EDUCATION
+        ================================= */
+
+        #education {
+            background: #f4f7fa;
+        }
+
+        .timeline {
+            max-width: 850px;
+
+            border-left: 2px solid #0b1f3a;
+
+            padding-left: 40px;
+        }
+
+        .timeline-item {
+            position: relative;
+
+            margin-bottom: 55px;
+        }
+
+        .timeline-item::before {
+            content: "";
+
+            position: absolute;
+
+            left: -49px;
+            top: 5px;
+
+            width: 15px;
+            height: 15px;
+
+            background: #0b1f3a;
+
+            border-radius: 50%;
+        }
+
+        .timeline-year {
+            font-size: 12px;
+
+            color: #718096;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 8px;
+        }
+
+        .timeline-item h3 {
+            font-size: 28px;
+
+            margin-bottom: 5px;
+
+            color: #0b1f3a;
+        }
+
+        .timeline-item h4 {
+            font-size: 16px;
+
+            color: #486581;
+
+            margin-bottom: 15px;
+        }
+
+        .timeline-item p {
+            color: #627d98;
+
+            line-height: 1.7;
+
+            max-width: 650px;
+        }
+
+
+        /* ================================
+           CONTACT
+        ================================= */
+
+        #contact {
+            background: white;
+
+            min-height: 80vh;
+        }
+
+        .contact-layout {
+            display: grid;
+
+            grid-template-columns: 1.3fr 1fr;
+
+            gap: 80px;
+        }
+
+        .contact-heading {
+            font-size: 70px;
+
+            line-height: 0.95;
+
+            letter-spacing: -5px;
+
+            margin-bottom: 25px;
+
+            color: #0b1f3a;
+        }
+
+        .contact-heading span {
+            color: #6b8299;
+        }
+
+        .contact-description {
+            max-width: 500px;
+
+            color: #627d98;
+
+            line-height: 1.7;
+
+            margin-bottom: 30px;
+        }
+
+        .contact-details {
+            border-top: 1px solid #cbd5e1;
+        }
+
+        .contact-row {
+            padding: 20px 0;
+
+            border-bottom: 1px solid #cbd5e1;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+        .contact-row span {
+            color: #829ab1;
+
+            font-size: 11px;
+
+            letter-spacing: 1px;
+
+            font-weight: bold;
+        }
+
+        .contact-row a,
+        .contact-row strong {
+            font-size: 14px;
+
+            text-align: right;
+
+            word-break: break-word;
+
+            color: #0b1f3a;
+        }
+
+        .contact-row a:hover {
+            color: #365d85;
+        }
+
+        .contact-note {
+            background: #e8eef5;
+
+            padding: 35px;
+
+            height: fit-content;
+
+            border-left: 4px solid #0b1f3a;
+        }
+
+        .contact-note h3 {
+            font-size: 25px;
+
+            margin-bottom: 15px;
+
+            color: #0b1f3a;
+        }
+
+        .contact-note p {
+            color: #52606d;
+
+            line-height: 1.7;
+
+            font-size: 14px;
+        }
+
+
+        /* ================================
+           FOOTER
+        ================================= */
+
+        footer {
+            margin-left: 230px;
+
+            background: #071426;
+
+            color: #9fb3c8;
+
+            padding: 25px 8%;
+
+            font-size: 12px;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+
+        /* ================================
+           RESPONSIVE
+        ================================= */
+
+        @media(max-width: 950px) {
+
+            .sidebar {
+                position: relative;
+
+                width: 100%;
+
+                height: auto;
+
+                padding: 25px;
+
+                flex-direction: row;
+
+                align-items: center;
+
+                justify-content: space-between;
+            }
+
+            .brand {
+                margin-bottom: 0;
+            }
+
+            .menu {
+                display: flex;
+
+                gap: 15px;
+            }
+
+            .menu li {
+                margin-bottom: 0;
+            }
+
+            .menu a {
+                font-size: 11px;
+            }
+
+            .sidebar-bottom {
+                display: none;
+            }
+
+            main {
+                margin-left: 0;
+            }
+
+            footer {
+                margin-left: 0;
+            }
+
+            .hero-right {
+                opacity: 0.3;
+            }
+
+            .about-layout,
+            .contact-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media(max-width: 700px) {
+
+            section {
+                padding: 70px 6%;
+            }
+
+            .sidebar {
+                flex-direction: column;
+
+                gap: 20px;
+            }
+
+            .menu {
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .hero-left {
+                width: 100%;
+            }
+
+            .hero-title {
+                font-size: 65px;
+
+                letter-spacing: -5px;
+            }
+
+            .hero-right {
+                display: none;
+            }
+
+            .section-title {
+                font-size: 38px;
+            }
+
+            .section-top {
+                align-items: flex-start;
+
+                flex-direction: column;
+
+                gap: 10px;
+            }
+
+            .project {
+                grid-template-columns: 60px 1fr;
+            }
+
+            .project-number {
+                font-size: 35px;
+            }
+
+            .project-type {
+                grid-column: 2;
+
+                justify-self: start;
+            }
+
+            .ai-box {
+                padding: 35px 25px;
+            }
+
+            .ai-box h2 {
+                font-size: 42px;
+            }
+
+            .contact-heading {
+                font-size: 55px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
 <body>
-<h1>hello dilipreddy!!!</h1>
+
+
+    <!-- ================================
+         SIDEBAR
+    ================================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <h2>SANGAM.</h2>
+
+            <p>PORTFOLIO / 2026</p>
+
+        </div>
+
+
+        <ul class="menu">
+
+            <li>
+                <a href="#home">
+                    <span>01</span> Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#about">
+                    <span>02</span> About
+                </a>
+            </li>
+
+            <li>
+                <a href="#skills">
+                    <span>03</span> Skills
+                </a>
+            </li>
+
+            <li>
+                <a href="#projects">
+                    <span>04</span> Projects
+                </a>
+            </li>
+
+            <li>
+                <a href="#ai">
+                    <span>05</span> AI Lab
+                </a>
+            </li>
+
+            <li>
+                <a href="#education">
+                    <span>06</span> Education
+                </a>
+            </li>
+
+            <li>
+                <a href="#contact">
+                    <span>07</span> Contact
+                </a>
+            </li>
+
+        </ul>
+
+
+        <div class="sidebar-bottom">
+
+            <p>
+                Computer Science Student<br>
+                Sai University<br>
+                Andhra Pradesh
+            </p>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ================================
+         MAIN
+    ================================= -->
+
+    <main>
+
+
+        <!-- HOME -->
+
+        <section id="home">
+
+            <div class="hero-left">
+
+                <div class="hero-number">
+                    01 — INTRODUCTION
+                </div>
+
+                <h1 class="hero-title">
+                    SANGAM
+                    <span>DILIP</span>
+                    REDDY
+                </h1>
+
+                <p class="hero-description">
+
+                    Computer Science student at
+                    <strong>Sai University</strong>,
+                    interested in programming,
+                    Artificial Intelligence and
+                    building useful digital experiences.
+
+                </p>
+
+
+                <div class="hero-links">
+
+                    <a href="#projects">
+                        VIEW PROJECTS
+                    </a>
+
+                    <a href="#contact">
+                        CONTACT ME
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-right">
+
+                <div class="initial">
+                    S
+                </div>
+
+                <div class="hero-tag">
+                    CS STUDENT
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ABOUT -->
+
+        <section id="about">
+
+            <div class="section-top">
+
+                <div class="section-number">
+                    02 / ABOUT
+                </div>
+
+                <h2 class="section-title">
+                    Who I am
+                </h2>
+
+            </div>
+
+
+            <div class="about-layout">
+
+                <div>
+
+                    <div class="about-label">
+                        A SHORT INTRODUCTION
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <div class="about-text">
+
+                        I am a <strong>Computer Science student</strong>
+                        at Sai University with an interest in
+                        technology, programming and
+                        Artificial Intelligence.
+
+                        <br><br>
+
+                        I enjoy learning by building projects
+                        and experimenting with new ideas.
+                        My current focus is developing a strong
+                        technical foundation while exploring
+                        modern technologies.
+
+                    </div>
+
+
+                    <div class="about-facts">
+
+                        <div class="fact">
+
+                            <small>UNIVERSITY</small>
+
+                            <strong>
+                                Sai University
+                            </strong>
+
+                        </div>
+
+
+                        <div class="fact">
+
+                            <small>GRADUATION</small>
+
+                            <strong>
+                                2029
+                            </strong>
+
+                        </div>
+
+
+                        <div class="fact">
+
+                            <small>LOCATION</small>
+
+                            <strong>
+                                Andhra Pradesh
+                            </strong>
+
+                        </div>
+
+
+                        <div class="fact">
+
+                            <small>FOCUS</small>
+
+                            <strong>
+                                CS + AI
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- SKILLS -->
+
+        <section id="skills">
+
+            <div class="section-top">
+
+                <div class="section-number">
+                    03 / SKILLS
+                </div>
+
+                <h2 class="section-title">
+                    What I use
+                </h2>
+
+            </div>
+
+
+            <p class="skills-intro">
+
+                These are some of the technologies and
+                concepts I am currently learning and
+                developing through coursework and
+                personal projects.
+
+            </p>
+
+
+            <div class="skill-list">
+
+                <div class="skill">HTML</div>
+
+                <div class="skill">CSS</div>
+
+                <div class="skill">JavaScript</div>
+
+                <div class="skill">Python</div>
+
+                <div class="skill">C Programming</div>
+
+                <div class="skill">Data Structures</div>
+
+                <div class="skill">Algorithms</div>
+
+                <div class="skill">Artificial Intelligence</div>
+
+                <div class="skill">Problem Solving</div>
+
+                <div class="skill">Git & GitHub</div>
+
+                <div class="skill">Responsive Design</div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PROJECTS -->
+
+        <section id="projects">
+
+            <div class="section-top">
+
+                <div class="section-number">
+                    04 / PROJECTS
+                </div>
+
+                <h2 class="section-title">
+                    Selected work
+                </h2>
+
+            </div>
+
+
+            <div class="project">
+
+                <div class="project-number">
+                    01
+                </div>
+
+                <div>
+
+                    <h3>
+                        Personal Portfolio
+                    </h3>
+
+                    <p>
+                        A responsive personal portfolio
+                        website designed to showcase
+                        education, skills, projects and
+                        professional information.
+                    </p>
+
+                </div>
+
+                <div class="project-type">
+                    WEB DESIGN
+                </div>
+
+            </div>
+
+
+            <div class="project">
+
+                <div class="project-number">
+                    02
+                </div>
+
+                <div>
+
+                    <h3>
+                        Educational Website
+                    </h3>
+
+                    <p>
+                        A structured educational website
+                        created to organize courses,
+                        resources and information in a
+                        simple user-friendly interface.
+                    </p>
+
+                </div>
+
+                <div class="project-type">
+                    FRONTEND
+                </div>
+
+            </div>
+
+
+            <div class="project">
+
+                <div class="project-number">
+                    03
+                </div>
+
+                <div>
+
+                    <h3>
+                        AI Exploration Project
+                    </h3>
+
+                    <p>
+                        A beginner-level exploration of
+                        Artificial Intelligence concepts
+                        and their possible applications
+                        in everyday technology.
+                    </p>
+
+                </div>
+
+                <div class="project-type">
+                    AI / PYTHON
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- AI LAB -->
+
+        <section id="ai">
+
+            <div class="section-top">
+
+                <div class="section-number">
+                    05 / AI LAB
+                </div>
+
+                <h2 class="section-title">
+                    Exploring AI
+                </h2>
+
+            </div>
+
+
+            <div class="ai-box">
+
+                <div class="ai-small">
+                    CURRENT INTEREST
+                </div>
+
+                <h2>
+                    Artificial Intelligence
+                </h2>
+
+                <p>
+
+                    I am exploring Artificial Intelligence
+                    as an area where programming,
+                    mathematics and creativity come
+                    together.
+
+                    My goal is to understand the fundamentals
+                    and gradually move towards building
+                    practical AI-based applications.
+
+                </p>
+
+
+                <div class="ai-topics">
+
+                    <div class="ai-topic">
+                        MACHINE LEARNING
+                    </div>
+
+                    <div class="ai-topic">
+                        PYTHON
+                    </div>
+
+                    <div class="ai-topic">
+                        DATA
+                    </div>
+
+                    <div class="ai-topic">
+                        ALGORITHMS
+                    </div>
+
+                    <div class="ai-topic">
+                        GENERATIVE AI
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- EDUCATION -->
+
+        <section id="education">
+
+            <div class="section-top">
+
+                <div class="section-number">
+                    06 / EDUCATION
+                </div>
+
+                <h2 class="section-title">
+                    Academic journey
+                </h2>
+
+            </div>
+
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+
+                    <div class="timeline-year">
+                        2025 — 2029
+                    </div>
+
+                    <h3>
+                        Sai University
+                    </h3>
+
+                    <h4>
+                        Computer Science Student
+                    </h4>
+
+                    <p>
+
+                        Currently pursuing my undergraduate
+                        degree and developing foundations in
+                        programming, computer science,
+                        algorithms and emerging technologies.
+
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-year">
+                        TARGET
+                    </div>
+
+                    <h3>
+                        Graduation — 2029
+                    </h3>
+
+                    <h4>
+                        Building towards the future
+                    </h4>
+
+                    <p>
+
+                        My goal is to graduate with strong
+                        technical knowledge, practical project
+                        experience and a deeper understanding
+                        of modern technologies.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CONTACT -->
+
+        <section id="contact">
+
+            <div class="section-top">
+
+                <div class="section-number">
+                    07 / CONTACT
+                </div>
+
+                <h2 class="section-title">
+                    Get in touch
+                </h2>
+
+            </div>
+
+
+            <div class="contact-layout">
+
+
+                <div>
+
+                    <h2 class="contact-heading">
+
+                        Let's
+                        <span>connect.</span>
+
+                    </h2>
+
+                    <p class="contact-description">
+
+                        Interested in technology,
+                        collaboration or simply
+                        connecting? Feel free to
+                        reach out through my
+                        professional profiles.
+
+                    </p>
+
+
+                    <div class="contact-details">
+
+
+                        <div class="contact-row">
+
+                            <span>EMAIL</span>
+
+                            <a href="mailto:dilipreddy.s-29@scds.saiuniversity.edu.in">
+
+                                dilipreddy.s-29@scds.saiuniversity.edu.in
+
+                            </a>
+
+                        </div>
+
+
+                        <div class="contact-row">
+
+                            <span>GITHUB</span>
+
+                            <a href="https://github.com/sangamdilipreddy2"
+                               target="_blank">
+
+                                sangamdilipreddy2 ↗
+
+                            </a>
+
+                        </div>
+
+
+                        <div class="contact-row">
+
+                            <span>LINKEDIN</span>
+
+                            <strong>
+                                Sangam Dilip Reddy
+                            </strong>
+
+                        </div>
+
+
+                        <div class="contact-row">
+
+                            <span>LOCATION</span>
+
+                            <strong>
+                                Andhra Pradesh
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-note">
+
+                    <h3>
+                        Currently learning.
+                    </h3>
+
+                    <p>
+
+                        Computer Science, programming,
+                        web development and Artificial
+                        Intelligence.
+
+                        <br><br>
+
+                        I am always interested in learning
+                        something new and turning ideas
+                        into projects.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026
+        <strong>Sangam Dilip Reddy</strong>
+        — Computer Science Student.
+
+    </footer>
+
+
 </body>
-  
-<html>
+
+</html>
